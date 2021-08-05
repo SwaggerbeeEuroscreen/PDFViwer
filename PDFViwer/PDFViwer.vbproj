@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{9E46153D-DCA5-4088-8A43-E5A5CBAA0D61}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PDFViwer</RootNamespace>
+    <AssemblyName>PDFViwer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44370</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>PDFViwer.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>PDFViwer.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\apple-touch-icon.png" />
+    <Content Include="data\browsersupport.js" />
+    <Content Include="data\eraser.cur" />
+    <Content Include="data\favicon.ico" />
+    <Content Include="data\highlighter.cur" />
+    <Content Include="data\html5-unsupported.html" />
+    <Content Include="data\html5.png" />
+    <Content Include="data\img0.png" />
+    <Content Include="data\img1.png" />
+    <Content Include="data\img10.png" />
+    <Content Include="data\img100.png" />
+    <Content Include="data\img101.png" />
+    <Content Include="data\img102.png" />
+    <Content Include="data\img103.png" />
+    <Content Include="data\img104.png" />
+    <Content Include="data\img105.png" />
+    <Content Include="data\img106.png" />
+    <Content Include="data\img107.png" />
+    <Content Include="data\img108.png" />
+    <Content Include="data\img109.png" />
+    <Content Include="data\img11.png" />
+    <Content Include="data\img110.png" />
+    <Content Include="data\img111.png" />
+    <Content Include="data\img112.png" />
+    <Content Include="data\img113.png" />
+    <Content Include="data\img114.png" />
+    <Content Include="data\img115.png" />
+    <Content Include="data\img116.png" />
+    <Content Include="data\img117.png" />
+    <Content Include="data\img118.png" />
+    <Content Include="data\img119.png" />
+    <Content Include="data\img12.png" />
+    <Content Include="data\img120.png" />
+    <Content Include="data\img121.png" />
+    <Content Include="data\img122.png" />
+    <Content Include="data\img123.png" />
+    <Content Include="data\img124.png" />
+    <Content Include="data\img125.png" />
+    <Content Include="data\img126.png" />
+    <Content Include="data\img127.png" />
+    <Content Include="data\img128.png" />
+    <Content Include="data\img129.png" />
+    <Content Include="data\img13.png" />
+    <Content Include="data\img130.png" />
+    <Content Include="data\img131.png" />
+    <Content Include="data\img132.png" />
+    <Content Include="data\img133.png" />
+    <Content Include="data\img134.png" />
+    <Content Include="data\img135.png" />
+    <Content Include="data\img136.png" />
+    <Content Include="data\img137.png" />
+    <Content Include="data\img138.png" />
+    <Content Include="data\img139.png" />
+    <Content Include="data\img14.png" />
+    <Content Include="data\img140.png" />
+    <Content Include="data\img141.png" />
+    <Content Include="data\img142.png" />
+    <Content Include="data\img143.png" />
+    <Content Include="data\img144.png" />
+    <Content Include="data\img145.png" />
+    <Content Include="data\img146.png" />
+    <Content Include="data\img147.png" />
+    <Content Include="data\img148.png" />
+    <Content Include="data\img149.png" />
+    <Content Include="data\img15.png" />
+    <Content Include="data\img150.png" />
+    <Content Include="data\img151.png" />
+    <Content Include="data\img152.png" />
+    <Content Include="data\img153.png" />
+    <Content Include="data\img154.png" />
+    <Content Include="data\img155.png" />
+    <Content Include="data\img156.png" />
+    <Content Include="data\img157.png" />
+    <Content Include="data\img158.png" />
+    <Content Include="data\img159.png" />
+    <Content Include="data\img16.png" />
+    <Content Include="data\img17.png" />
+    <Content Include="data\img18.png" />
+    <Content Include="data\img19.png" />
+    <Content Include="data\img2.svg" />
+    <Content Include="data\img20.png" />
+    <Content Include="data\img21.png" />
+    <Content Include="data\img22.png" />
+    <Content Include="data\img23.png" />
+    <Content Include="data\img24.png" />
+    <Content Include="data\img25.png" />
+    <Content Include="data\img26.png" />
+    <Content Include="data\img27.png" />
+    <Content Include="data\img28.png" />
+    <Content Include="data\img29.png" />
+    <Content Include="data\img3.png" />
+    <Content Include="data\img30.png" />
+    <Content Include="data\img31.png" />
+    <Content Include="data\img32.png" />
+    <Content Include="data\img33.png" />
+    <Content Include="data\img34.png" />
+    <Content Include="data\img35.png" />
+    <Content Include="data\img36.png" />
+    <Content Include="data\img37.png" />
+    <Content Include="data\img38.png" />
+    <Content Include="data\img39.png" />
+    <Content Include="data\img4.svg" />
+    <Content Include="data\img40.png" />
+    <Content Include="data\img41.png" />
+    <Content Include="data\img42.png" />
+    <Content Include="data\img43.png" />
+    <Content Include="data\img44.png" />
+    <Content Include="data\img45.png" />
+    <Content Include="data\img46.png" />
+    <Content Include="data\img47.png" />
+    <Content Include="data\img48.png" />
+    <Content Include="data\img49.png" />
+    <Content Include="data\img5.svg" />
+    <Content Include="data\img50.png" />
+    <Content Include="data\img51.png" />
+    <Content Include="data\img52.png" />
+    <Content Include="data\img53.png" />
+    <Content Include="data\img54.png" />
+    <Content Include="data\img55.png" />
+    <Content Include="data\img56.png" />
+    <Content Include="data\img57.png" />
+    <Content Include="data\img58.png" />
+    <Content Include="data\img59.png" />
+    <Content Include="data\img6.png" />
+    <Content Include="data\img60.png" />
+    <Content Include="data\img61.png" />
+    <Content Include="data\img62.png" />
+    <Content Include="data\img63.png" />
+    <Content Include="data\img64.png" />
+    <Content Include="data\img65.png" />
+    <Content Include="data\img66.png" />
+    <Content Include="data\img67.png" />
+    <Content Include="data\img68.png" />
+    <Content Include="data\img69.png" />
+    <Content Include="data\img7.png" />
+    <Content Include="data\img70.png" />
+    <Content Include="data\img71.png" />
+    <Content Include="data\img72.png" />
+    <Content Include="data\img73.png" />
+    <Content Include="data\img74.png" />
+    <Content Include="data\img75.png" />
+    <Content Include="data\img76.png" />
+    <Content Include="data\img77.png" />
+    <Content Include="data\img78.png" />
+    <Content Include="data\img79.png" />
+    <Content Include="data\img8.png" />
+    <Content Include="data\img80.png" />
+    <Content Include="data\img81.png" />
+    <Content Include="data\img82.png" />
+    <Content Include="data\img83.png" />
+    <Content Include="data\img84.png" />
+    <Content Include="data\img85.png" />
+    <Content Include="data\img86.png" />
+    <Content Include="data\img87.png" />
+    <Content Include="data\img88.png" />
+    <Content Include="data\img89.png" />
+    <Content Include="data\img9.png" />
+    <Content Include="data\img90.png" />
+    <Content Include="data\img91.png" />
+    <Content Include="data\img92.png" />
+    <Content Include="data\img93.png" />
+    <Content Include="data\img94.png" />
+    <Content Include="data\img95.png" />
+    <Content Include="data\img96.png" />
+    <Content Include="data\img97.png" />
+    <Content Include="data\img98.png" />
+    <Content Include="data\img99.png" />
+    <Content Include="data\lock.cur" />
+    <Content Include="data\marker.cur" />
+    <Content Include="data\player.js" />
+    <Content Include="data\slide1.css" />
+    <Content Include="data\slide1.js" />
+    <Content Include="data\slide10.css" />
+    <Content Include="data\slide10.js" />
+    <Content Include="data\slide11.css" />
+    <Content Include="data\slide11.js" />
+    <Content Include="data\slide12.css" />
+    <Content Include="data\slide12.js" />
+    <Content Include="data\slide13.css" />
+    <Content Include="data\slide13.js" />
+    <Content Include="data\slide14.css" />
+    <Content Include="data\slide14.js" />
+    <Content Include="data\slide15.css" />
+    <Content Include="data\slide15.js" />
+    <Content Include="data\slide16.css" />
+    <Content Include="data\slide16.js" />
+    <Content Include="data\slide17.css" />
+    <Content Include="data\slide17.js" />
+    <Content Include="data\slide18.css" />
+    <Content Include="data\slide18.js" />
+    <Content Include="data\slide19.css" />
+    <Content Include="data\slide19.js" />
+    <Content Include="data\slide2.css" />
+    <Content Include="data\slide2.js" />
+    <Content Include="data\slide20.css" />
+    <Content Include="data\slide20.js" />
+    <Content Include="data\slide21.css" />
+    <Content Include="data\slide21.js" />
+    <Content Include="data\slide22.css" />
+    <Content Include="data\slide22.js" />
+    <Content Include="data\slide23.css" />
+    <Content Include="data\slide23.js" />
+    <Content Include="data\slide24.css" />
+    <Content Include="data\slide24.js" />
+    <Content Include="data\slide25.css" />
+    <Content Include="data\slide25.js" />
+    <Content Include="data\slide26.css" />
+    <Content Include="data\slide26.js" />
+    <Content Include="data\slide27.css" />
+    <Content Include="data\slide27.js" />
+    <Content Include="data\slide28.css" />
+    <Content Include="data\slide28.js" />
+    <Content Include="data\slide29.css" />
+    <Content Include="data\slide29.js" />
+    <Content Include="data\slide3.css" />
+    <Content Include="data\slide3.js" />
+    <Content Include="data\slide30.css" />
+    <Content Include="data\slide30.js" />
+    <Content Include="data\slide31.css" />
+    <Content Include="data\slide31.js" />
+    <Content Include="data\slide32.css" />
+    <Content Include="data\slide32.js" />
+    <Content Include="data\slide33.css" />
+    <Content Include="data\slide33.js" />
+    <Content Include="data\slide34.css" />
+    <Content Include="data\slide34.js" />
+    <Content Include="data\slide35.css" />
+    <Content Include="data\slide35.js" />
+    <Content Include="data\slide36.css" />
+    <Content Include="data\slide36.js" />
+    <Content Include="data\slide37.css" />
+    <Content Include="data\slide37.js" />
+    <Content Include="data\slide38.css" />
+    <Content Include="data\slide38.js" />
+    <Content Include="data\slide39.css" />
+    <Content Include="data\slide39.js" />
+    <Content Include="data\slide4.css" />
+    <Content Include="data\slide4.js" />
+    <Content Include="data\slide40.css" />
+    <Content Include="data\slide40.js" />
+    <Content Include="data\slide41.css" />
+    <Content Include="data\slide41.js" />
+    <Content Include="data\slide42.css" />
+    <Content Include="data\slide42.js" />
+    <Content Include="data\slide43.css" />
+    <Content Include="data\slide43.js" />
+    <Content Include="data\slide44.css" />
+    <Content Include="data\slide44.js" />
+    <Content Include="data\slide45.css" />
+    <Content Include="data\slide45.js" />
+    <Content Include="data\slide46.css" />
+    <Content Include="data\slide46.js" />
+    <Content Include="data\slide47.css" />
+    <Content Include="data\slide47.js" />
+    <Content Include="data\slide48.css" />
+    <Content Include="data\slide48.js" />
+    <Content Include="data\slide49.css" />
+    <Content Include="data\slide49.js" />
+    <Content Include="data\slide5.css" />
+    <Content Include="data\slide5.js" />
+    <Content Include="data\slide50.css" />
+    <Content Include="data\slide50.js" />
+    <Content Include="data\slide51.css" />
+    <Content Include="data\slide51.js" />
+    <Content Include="data\slide52.css" />
+    <Content Include="data\slide52.js" />
+    <Content Include="data\slide53.css" />
+    <Content Include="data\slide53.js" />
+    <Content Include="data\slide54.css" />
+    <Content Include="data\slide54.js" />
+    <Content Include="data\slide55.css" />
+    <Content Include="data\slide55.js" />
+    <Content Include="data\slide56.css" />
+    <Content Include="data\slide56.js" />
+    <Content Include="data\slide57.css" />
+    <Content Include="data\slide57.js" />
+    <Content Include="data\slide58.css" />
+    <Content Include="data\slide58.js" />
+    <Content Include="data\slide6.css" />
+    <Content Include="data\slide6.js" />
+    <Content Include="data\slide7.css" />
+    <Content Include="data\slide7.js" />
+    <Content Include="data\slide8.css" />
+    <Content Include="data\slide8.js" />
+    <Content Include="data\slide9.css" />
+    <Content Include="data\slide9.js" />
+    <Content Include="index.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\PowerPoint Player.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="data\fnt0.woff" />
+    <Content Include="data\fnt1.woff" />
+    <Content Include="data\fnt2.woff" />
+    <Content Include="data\fnt3.woff" />
+    <Content Include="data\fnt4.woff" />
+    <Content Include="data\fnt5.woff" />
+    <Content Include="data\fnt6.woff" />
+    <Content Include="data\fnt7.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62848</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44370/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
